@@ -13,8 +13,8 @@ for line in lines:
     m=Item(int(i[0]),int(i[1]),int(i[2]))
     Items_list.append(m)
 
-#print(Items_list)
 
+print(Items_list)
 
 def cmpfunc(ItemX):
     return ItemX.Value/ItemX.Weight
@@ -37,10 +37,13 @@ def KnapSack(W,list,N):
 
             if(list[i].isFractional==1):
                 currentValue+=(list[i].Value/list[i].Weight)*remainedWeight
-                remainedWeight=0
+                break
 
             else:
                 continue
 
 
-print(Items_list)
+    return currentValue
+
+
+print("max value: "+str(KnapSack(3,Items_list,len(Items_list))))

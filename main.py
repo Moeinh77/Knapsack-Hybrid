@@ -22,7 +22,6 @@ def cmpfunc(ItemX):
 def KnapSack(W,list,N):
 
     Items_list.sort(key=cmpfunc, reverse=True)
-    i=0
     currentValue=0
     remainedWeight=W
 
@@ -46,4 +45,4 @@ def KnapSack(W,list,N):
     return currentValue
 
 
-print("max value: "+str(KnapSack(3,Items_list,len(Items_list))))
+print("\nMax value: "+str(KnapSack(3,Items_list,len(Items_list))))

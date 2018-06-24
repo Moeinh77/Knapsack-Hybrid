@@ -1,8 +1,12 @@
+# exaples : IN => capacity 5 and capacity 6
+#          IN2=> capacity 4 and 3 and 5
+# also you can change the isFractional of last item to 0
+
 from collections import namedtuple
 
 Item = namedtuple("Item", "Weight Value isFractional")
 
-with open("IN.TXT", "r") as InFile:
+with open("IN2.TXT", "r") as InFile:
     lines = InFile.readlines()
 
 Items_list = []

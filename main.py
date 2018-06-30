@@ -1,6 +1,7 @@
-# exaples : IN => capacity 5 and capacity 6
-#          IN2=> capacity 4 and 3 and 5
-# also you can change the isFractional of last item to 0
+# exaples : IN => capacity 10 and capacity 12
+#           last item 0 isfractional and capacity 1
+
+#           IN2=> capacity 4 and 3 and 5
 
 from collections import namedtuple
 
@@ -62,13 +63,16 @@ def KnapSack(W, list, N):
     return currentValue
 
 
-W = int(input("\nEnter the MAXIMUM capacity of the KNAPSACK: "))
 
+W = int(input("\nEnter the MAXIMUM capacity of the KNAPSACK: "))
 
 Maxval=KnapSack(W, Items_list, len(Items_list))
 
-print("\n***Taken items:")
-print(KnapSack_list)
+if not KnapSack_list:
+    print("Sorry your bag is just too small!\nCould'nt take anything")
+else:
+    print("\n***Taken items:")
+    print(KnapSack_list)
 
 if(fractionated!=None):
     print("\n"+str(Items_list[fractionated])+ " is Fractionated!!!")
